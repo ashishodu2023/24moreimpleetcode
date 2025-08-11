@@ -10,26 +10,22 @@ Time O(n)
 Space O(1)
 """
 def longest_subarray(nums:list[int],K:int)->int:
-    max_len = 0 
-    n = len(nums)
-    current_sum = 0
-    left = 0 
-
+    
     if not nums:
         return 0
+    max_len = 0
+    current_sum = 0 
+    left = 0 
     
-    for right in range(n):
-
-        current_sum+=nums[right]
-
-        while current_sum>K and left<=right:
-            current_sum-=nums[left]
+    for right,value in enumerate(nums):
+        current_sum+=value
+        while current_sum>k and left<=right:
+            current_sum -=nums[left]
             left+=1
-
         max_len = max(max_len,right - left + 1)
-
     return max_len
-
+        
+    
 
 
 # Example test

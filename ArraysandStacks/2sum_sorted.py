@@ -22,3 +22,8 @@ def two_sum_sorted(nums:list[int],target:int)->list[int]:
 assert two_sum_sorted([1,2,3,4,6,8], 10) in ([1,5],[2,4])
 assert two_sum_sorted([1,2,3], 7) is None
     
+    
+    
+
+
+
